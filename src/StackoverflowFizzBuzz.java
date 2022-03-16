@@ -2,6 +2,7 @@ package src;
 
 import java.util.stream.IntStream;
 
+/// FizzBuzz found on stackoverflow
 class FizzBuzz {
     public static void main(String[] args) {
         IntStream.rangeClosed(1, 100)

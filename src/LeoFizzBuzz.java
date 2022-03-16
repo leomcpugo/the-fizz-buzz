@@ -1,5 +1,6 @@
 package src;
 
+// Leo's take on FizzBuzz
 public class LeoFizzBuzz {
 
     // first multiple
@@ -12,10 +13,12 @@ public class LeoFizzBuzz {
 
     public static void main(String[] args) {
 
+        // greetings
         System.out.println("\n***************************");
         System.out.println(String.format("GET READY FOR THE %s%s", firstKey, secondKey));
         System.out.println("***************************\n");
 
+        // FizzBuzz
         int firstMultipleCount = 0;
         int secondMultipleCount = 0;
         int allMultipleCount = 0;
@@ -27,21 +30,29 @@ public class LeoFizzBuzz {
 
             String output = null;
 
+            // both multiples
             if (isMultipleFirst && isMultipleSecond) {
                 output = firstKey + secondKey;
                 allMultipleCount++;
-            } else if (isMultipleFirst) {
+            }
+            // first multiple only
+            else if (isMultipleFirst) {
                 output = firstKey;
                 firstMultipleCount++;
-            } else if (isMultipleSecond) {
+            }
+            // second multiple only
+            else if (isMultipleSecond) {
                 output = secondKey;
                 secondMultipleCount++;
-            } else
+            }
+            // no multiple
+            else
                 output = String.valueOf(i);
 
             System.out.println(String.format("%03d: %s", i, output));
         }
 
+        // totals display
         System.out.println("\n***************************");
         System.out.println(String.format("%s%s COMPLETED", firstKey, secondKey));
         System.out.println(String.format("%s FOUND: %s", firstKey, firstMultipleCount));
