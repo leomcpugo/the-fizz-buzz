@@ -13,5 +13,5 @@ For numbers which are multiples of both three and five print “FizzBuzz”.
 - LeoFizzBuzz.java is an improved version that gives a better output to the user, and has better readability for the developers
 
 # Testing
-- Open a terminal from from the root directory
+- Open a terminal from the root directory
 - Execute "java src/LeoFizzBuzz.java" or "java src/StackoverflowFizzBuzz.java"
