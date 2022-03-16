@@ -12,23 +12,41 @@ public class LeoFizzBuzz {
 
     public static void main(String[] args) {
 
-        for (int i = 0; i < 100; i++) {
+        System.out.println("\n***************************");
+        System.out.println(String.format("GET READY FOR THE %s%s", firstKey, secondKey));
+        System.out.println("***************************\n");
+
+        int firstMultipleCount = 0;
+        int secondMultipleCount = 0;
+        int allMultipleCount = 0;
+
+        for (int i = 1; i <= 100; i++) {
 
             boolean isMultipleFirst = (i % firstMultiple) == 0;
             boolean isMultipleSecond = (i % secondMultiple) == 0;
 
             String output = null;
 
-            if (isMultipleFirst && isMultipleSecond)
+            if (isMultipleFirst && isMultipleSecond) {
                 output = firstKey + secondKey;
-            else if (isMultipleFirst)
+                allMultipleCount++;
+            } else if (isMultipleFirst) {
                 output = firstKey;
-            else if (isMultipleSecond)
+                firstMultipleCount++;
+            } else if (isMultipleSecond) {
                 output = secondKey;
-            else
+                secondMultipleCount++;
+            } else
                 output = String.valueOf(i);
 
-            System.out.println(output);
+            System.out.println(String.format("%03d: %s", i, output));
         }
+
+        System.out.println("\n***************************");
+        System.out.println(String.format("%s%s COMPLETED", firstKey, secondKey));
+        System.out.println(String.format("%s FOUND: %s", firstKey, firstMultipleCount));
+        System.out.println(String.format("%s FOUND: %s", secondKey, secondMultipleCount));
+        System.out.println(String.format("%s FOUND: %s", firstKey + secondKey, allMultipleCount));
+        System.out.println("***************************\n");
     }
 }
